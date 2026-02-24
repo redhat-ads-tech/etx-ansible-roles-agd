@@ -1,6 +1,6 @@
-# Platform Engineering Workshop Collection
+# OpenShift Advanced Application Platform Demo
 
-Ansible collection for deploying a comprehensive Platform Engineering workshop environment on OpenShift.
+Ansible collection for deploying a comprehensive OpenShift Advanced Application Platform Demo demno environment.
 
 ## Installation
 
@@ -10,7 +10,7 @@ ansible-galaxy collection install rhdp.workshop
 
 ## Roles
 
-### ocp4_workload_platform_engineering_workshop
+### ocp4_etx_app_platform
 
 Deploys a complete platform engineering stack on OpenShift, including developer portals, CI/CD pipelines, GitOps, security tools, and more. This role provides a comprehensive workshop environment for learning and demonstrating platform engineering best practices.
 
@@ -39,9 +39,9 @@ The role deploys and configures the following components:
 - name: Deploy Platform Engineering Workshop
   hosts: localhost
   tasks:
-    - name: Install platform engineering workload
+    - name: Install OpenShift Advanced Application Platform Demo
       ansible.builtin.include_role:
-        name: rhdp.workshop.ocp4_workload_platform_engineering_workshop
+        name: rhdp.workshop.ocp4_etx_app_platform
       vars:
         ACTION: provision
         common_password: changeme
@@ -60,10 +60,10 @@ The role provides extensive configuration options through variables. Key variabl
 
 - `ACTION` - Set to `provision` or `destroy`
 - `common_password` - Default password for workshop users
-- `ocp4_workload_platform_engineering_workshop_noobaa_install` - Enable/disable NooBaa installation (default: true)
-- `ocp4_workload_platform_engineering_workshop_terminal_install` - Enable/disable Web Terminal (default: true)
+- `ocp4_etx_app_platform_noobaa_install` - Enable/disable NooBaa installation (default: true)
+- `ocp4_etx_app_platform_terminal_install` - Enable/disable Web Terminal (default: true)
 
-See [defaults/main.yml](roles/ocp4_workload_platform_engineering_workshop/defaults/main.yml) for all available configuration options.
+See [defaults/main.yml](roles/ocp4_etx_app_platform/defaults/main.yml) for all available configuration options.
 
 ## License
 

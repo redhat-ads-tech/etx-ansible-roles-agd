@@ -1,7 +1,7 @@
 ---
 
 - name: Create Terminal application
-  when: ocp4_workload_platform_engineering_workshop_terminal_install | bool
+  when: ocp4_etx_app_platform_terminal_install | bool
   kubernetes.core.k8s:
     state: present
     definition: "{{ lookup('template', 'terminal/terminal-subscription.yaml.j2') | from_yaml }}"

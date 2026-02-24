@@ -42,7 +42,7 @@
 
 # Main workload tasks
 - name: Install OpenShift Gitops
-  when: ocp4_workload_platform_engineering_workshop_openshift_gitops_install | bool
+  when: ocp4_etx_app_platform_openshift_gitops_install | bool
   ansible.builtin.include_tasks: openshift_gitops.yml
 
 - name: Retrieve openshift-gitops-cluster secret
