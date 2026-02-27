@@ -138,7 +138,7 @@ spec:
           namespace: {{ ocp4_etx_app_platform_developer_hub_namespace }}
           config:
             backstage:
-              host: backstage-{{ ocp4_etx_app_platform_developer_hub_namespace }}.{{ r_openshift_subdomain }}
+              host: backstage-developer-hub-{{ ocp4_etx_app_platform_developer_hub_namespace }}.{{ r_openshift_subdomain }}
             gitlab:
               host: {{ ocp4_etx_app_platform_gitlab_config_host }}
             argocd:
