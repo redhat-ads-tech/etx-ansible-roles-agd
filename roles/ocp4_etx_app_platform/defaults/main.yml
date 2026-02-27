@@ -278,7 +278,7 @@ ocp4_etx_app_platform_rhdh_gitops_password: "{{ common_password }}"
 # ------------------------------------------------
 
 ocp4_etx_app_platform_rhdh_argo_application_name: backstage-bootstrap
-ocp4_etx_app_platform_rhdh_namespace: backstage
+ocp4_etx_app_platform_rhdh_namespace: rhdh
 ocp4_etx_app_platform_rhdh_psql_password: password
 
 # ------------------------------------------------

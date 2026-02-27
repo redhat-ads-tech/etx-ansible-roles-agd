@@ -111,8 +111,8 @@ spec:
           client:
             backstage:
               name: {{ ocp4_etx_app_platform_rhbk_client_backstage_name }}
-              redirectUri: https://backstage-{{ ocp4_etx_app_platform_rhdh_namespace }}.{{ r_openshift_subdomain }}/api/auth/oidc/handler/frame
-              webOrigin: https://backstage-{{ ocp4_etx_app_platform_rhdh_namespace }}.{{ r_openshift_subdomain }}
+              redirectUri: ""
+              webOrigin: ""
               secret: "{{ ocp4_etx_app_platform_rhbk_client_backstage_secret }}"
             backstagePlugin:
               name: {{ ocp4_etx_app_platform_rhbk_client_backstage_plugin_name }}
@@ -169,7 +169,7 @@ spec:
               rootPassword: "{{ ocp4_etx_app_platform_gitlab_config_root_password }}"
               host: {{ ocp4_etx_app_platform_gitlab_config_host }}
             backstage:
-              host: backstage-{{ ocp4_etx_app_platform_rhdh_namespace }}.{{ r_openshift_subdomain }}
+              host: backstage-developer-hub-{{ ocp4_etx_app_platform_rhdh_namespace }}.{{ r_openshift_subdomain }}
             keycloak:
               host: {{ ocp4_etx_app_platform_rhbk_host }}.{{ r_openshift_subdomain }}
               realm: {{ ocp4_etx_app_platform_rhbk_realm_backstage_name }}
@@ -222,7 +222,7 @@ spec:
           namespace: {{ ocp4_etx_app_platform_orchestrator_namespace }}
           backstage:
             backend:
-              url: https://backstage-{{ ocp4_etx_app_platform_rhdh_namespace }}.{{ r_openshift_subdomain }}
+              url: https://backstage-developer-hub-{{ ocp4_etx_app_platform_rhdh_namespace }}.{{ r_openshift_subdomain }}
           openshift:
             url: {{ r_openshift_api_server }}
           gitlab:
